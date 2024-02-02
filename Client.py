@@ -13,7 +13,7 @@ def send_coordinates(client_socket):
         time.sleep(1)
 
 def send_quadcopter_path(client_socket):
-    step = 0.05
+    step = 0.2
     for x in np.arange(-max_obstacles_coordinate, max_obstacles_coordinate, step):
         for y in np.arange(-max_obstacles_coordinate, max_obstacles_coordinate, step):
             msg = f'{x},{y}'.encode()
